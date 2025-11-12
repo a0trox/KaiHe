@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>鍇荷實業</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        .nav-active {
+            color: #2563eb; /* 主色 */
+            font-weight: bold;
+            border-bottom: 2px solid #2563eb; /* 下划线 */
+        }
+        .section { padding: 80px 0; }
+        .card-hover { transition: all 0.3s ease; }
+        .card-hover:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+        .bg-gray-100 { background-color: #f8f9fa; }
+        .text-primary { color: #2563eb; }
+        .bg-primary { background-color: #2563eb; }
+        .opacity-0 {
+            opacity: 0;
+        }
+        .opacity-100 {
+            opacity: 1;
+        }
+        .card-hover button {
+            border: none;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+<!-- 導航欄 -->
+<nav class="fixed top-0 left-0 right-0 bg-white shadow-md z-50">
+    <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+        <h1 href="#" class="text-2xl font-bold text-primary">鍇荷實業</h1>
+        <div class="hidden md:flex space-x-6">
+            <a href="#home" class="hover:text-primary">首頁</a>
+            <a href="#services" class="hover:text-primary">業務範圍</a>
+            <a href="#cases" class="hover:text-primary">成功案例</a>
+            <a href="#process" class="hover:text-primary">服務流程</a>
+            <a href="#contact" class="hover:text-primary">聯繫我們</a>
+        </div>
+        <button class="md:hidden text-2xl"><i class="fa-solid fa-bars"></i></button>
+    </div>
+</nav>
+
+<!-- 首頁頭部 -->
+<section id="home" class="section bg-gray-100 pt-">
+    <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+        <div class="md:w-1/2 mb-8 md:mb-0">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">從裝修到能源<br>一站式解決</h1>
+            <p class="text-gray-600 text-lg mb-6">專業裝修工程 + 太陽能租賃安裝，涵蓋居家、商用空間，品質保障，價格透明</p>
+            <div class="flex flex-wrap gap-4">
+                <a href="https://lin.ee/KIQQeQc" class="bg-primary text-white px-6 py-3 rounded-lg font-medium hover:bg-primary/90">諮詢報價</a>
+                <a href="#cases" class="border-2 border-primary text-primary px-6 py-3 rounded-lg font-medium hover:bg-primary/10">查看案例</a>
+            </div>
+        </div>
+        <div class="md:w-1/2">
+            <div class="relative rounded-xl overflow-hidden shadow-lg">
+                <img src="https://picsum.photos/id/1048/800/600" alt="裝修工程實景" class="w-full h-auto">
+                <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4 text-white">
+                    <p>10年行業經驗 · 資質齊全 · 售後無憂</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 業務範圍 -->
+<section id="services" class="section">
+    <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-12">核心業務範圍</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- 裝修類 -->
+            <div class="card-hover bg-white rounded-xl shadow p-6 border-t-4 border-primary">
+                <div class="text-primary text-3xl mb-4"><i class="fa-solid fa-hammer"></i></div>
+                <h3 class="text-xl font-bold mb-3">基礎裝修工程</h3>
+                <ul class="text-gray-600 space-y-2">
+                    <li><i class="fa-solid fa-check text-primary mr-2"></i>貼瓷磚（牆面/地面）</li>
+                    <li><i class="fa-solid fa-check text-primary mr-2"></i>木地板鋪設（實木/複合）</li>
+                    <li><i class="fa-solid fa-check text-primary mr-2"></i>輕鋼架天花板安裝</li>
+                    <li><i class="fa-solid fa-check text-primary mr-2"></i>室內外油漆施工</li>
+                </ul>
+            </div>
+
+            <!-- 工程類 -->
+            <div class="card-hover bg-white rounded-xl shadow p-6 border-t-4 border-primary">
+                <div class="text-primary text-3xl mb-4"><i class="fa-solid fa-gears"></i></div>
+                <h3 class="text-xl font-bold mb-3">維修改造工程</h3>
+                <ul class="text-gray-600 space-y-2">
+                    <li><i class="fa-solid fa-check text-primary mr-2"></i>水電維修</li>
+                    <li><i class="fa-solid fa-check text-primary mr-2"></i>防水工程（屋頂/廚衛）</li>
+                    <li><i class="fa-solid fa-check text-primary mr-2"></i>鋼構工程設計施工</li>
+                    <li><i class="fa-solid fa-check text-primary mr-2"></i>舊屋翻新改造</li>
+                </ul>
+            </div>
+
+            <!-- 太陽能類 -->
+            <div class="card-hover bg-white rounded-xl shadow p-6 border-t-4 border-primary">
+                <div class="text-primary text-3xl mb-4"><i class="fa-solid fa-solar-panel"></i></div>
+                <h3 class="text-xl font-bold mb-3">太陽能服務</h3>
+                <ul class="text-gray-600 space-y-2">
+                    <li><i class="fa-solid fa-check text-primary mr-2"></i>太陽能板安裝設計</li>
+                    <li><i class="fa-solid fa-check text-primary mr-2"></i>太陽能租賃套餐（零首付）</li>
+                    <li><i class="fa-solid fa-check text-primary mr-2"></i>系統維護與售後保障</li>
+                    <li><i class="fa-solid fa-check text-primary mr-2"></i>政府補助政策申請</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="cases" class="section bg-gray-100">
+    <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-12">成功案例展示</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+            <!-- 案例卡片 1 -->
+            <div class="card-hover rounded-xl overflow-hidden relative group">
+                <!-- 图片容器 -->
+                <div class="slideshow-container relative w-full h-48 overflow-hidden">
+                    <div class="slides absolute inset-0 transition-opacity duration-500">
+                        <img src="/PavingBricks/PB1.jpg" alt="瓷磚鋪貼案例1" class="w-full h-full object-cover">
+                    </div>
+                    <div class="slides absolute inset-0 transition-opacity duration-500 opacity-0">
+                        <img src="/PavingBricks/PB2.jpg" alt="瓷磚鋪貼案例2" class="w-full h-full object-cover">
+                    </div>
+                    <div class="slides absolute inset-0 transition-opacity duration-500 opacity-0">
+                        <img src="/PavingBricks/PB3.jpg" alt="瓷磚鋪貼案例3" class="w-full h-full object-cover">
+                    </div>
+                </div>
+
+                <!-- 右侧箭头 -->
+                <div class="absolute right-0 top-0 h-full flex flex-col justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                    <button class="w-8 h-8 bg-black/50 hover:bg-black/70 text-white rounded-l-full flex items-center justify-center transition-all" onclick="changeSlide(1, this)">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- 信息区域 -->
+                <div class="p-4 bg-white">
+                    <h4 class="font-bold">住宅瓷磚鋪貼</h4>
+<!--                    <p class="text-sm text-gray-500">120㎡ · 客廳+廚衛</p>-->
+                </div>
+            </div>
+
+            <!-- 案例卡片 2 -->
+            <div class="card-hover rounded-xl overflow-hidden relative group">
+                <div class="slideshow-container relative w-full h-48 overflow-hidden">
+                    <div class="slides absolute inset-0 transition-opacity duration-500">
+                        <img src="\WoodFloor\WF1.png" alt="木地板案例1" class="w-full h-full object-cover">
+                    </div>
+                    <div class="slides absolute inset-0 transition-opacity duration-500 opacity-0">
+                        <img src="\WoodFloor\WF2.png" alt="木地板案例2" class="w-full h-full object-cover">
+                    </div>
+                    <div class="slides absolute inset-0 transition-opacity duration-500 opacity-0">
+                        <img src="\WoodFloor\WF3.png" alt="木地板案例3" class="w-full h-full object-cover">
+                    </div>
+                </div>
+
+                <div class="absolute right-0 top-0 h-full flex flex-col justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                    <button class="w-8 h-8 bg-black/50 hover:bg-black/70 text-white rounded-l-full flex items-center justify-center transition-all" onclick="changeSlide(1, this)">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="p-4 bg-white">
+                    <h4 class="font-bold">商用空間木地板</h4>
+<!--                    <p class="text-sm text-gray-500">居家地板</p>-->
+                </div>
+            </div>
+
+            <!-- 案例卡片 3 -->
+            <div class="card-hover rounded-xl overflow-hidden relative group">
+                <div class="slideshow-container relative w-full h-48 overflow-hidden">
+                    <div class="slides absolute inset-0 transition-opacity duration-500">
+                        <img src="/SolarEnergy/SolarEnergy1.png" alt="太陽能安裝案例1" class="w-full h-full object-cover">
+                    </div>
+                    <div class="slides absolute inset-0 transition-opacity duration-500 opa city-0">
+                        <img src="/SolarEnergy/SolarEnergy2.png" alt="太陽能安裝案例2" class="w-full h-full object-cover">
+                    </div>
+                    <div class="slides absolute inset-0 transition-opacity duration-500 opacity-0">
+                        <img src="/SolarEnergy/SolarEnergy3.png" alt="太陽能安裝案例3" class="w-full h-full object-cover">
+                    </div>
+                </div>
+
+                <div class="absolute right-0 top-0 h-full flex flex-col justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                    <button class="w-8 h-8 bg-black/50 hover:bg-black/70 text-white rounded-l-full flex items-center justify-center transition-all" onclick="changeSlide(1, this)">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="p-4 bg-white">
+                    <h4 class="font-bold">廠房太陽能安裝</h4>
+<!--                    <p class="text-sm text-gray-500">大面積 · 租賃套餐</p>-->
+                </div>
+            </div>
+
+            <!-- 案例卡片 4 -->
+            <div class="card-hover rounded-xl overflow-hidden relative group">
+                <div class="slideshow-container relative w-full h-48 overflow-hidden">
+                    <div class="slides absolute inset-0 transition-opacity duration-500">
+                        <img src="https://picsum.photos/id/271/600/400" alt="鋼構工程案例1" class="w-full h-full object-cover">
+                    </div>
+                    <div class="slides absolute inset-0 transition-opacity duration-500 opacity-0">
+                        <img src="https://picsum.photos/id/281/600/400" alt="鋼構工程案例2" class="w-full h-full object-cover">
+                    </div>
+                    <div class="slides absolute inset-0 transition-opacity duration-500 opacity-0">
+                        <img src="https://picsum.photos/id/291/600/400" alt="鋼構工程案例3" class="w-full h-full object-cover">
+                    </div>
+                </div>
+
+                <div class="absolute right-0 top-0 h-full flex flex-col justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                    <button class="w-8 h-8 bg-black/50 hover:bg-black/70 text-white rounded-l-full flex items-center justify-center transition-all" onclick="changeSlide(1, this)">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="p-4 bg-white">
+                    <h4 class="font-bold">戶外鋼構搭建</h4>
+<!--                    <p class="text-sm text-gray-500">80㎡ · 商鋪雨棚</p>-->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- 成功案例 -->
+<!--<section id="cases" class="section bg-gray-100">-->
+<!--    <div class="container mx-auto px-4">-->
+<!--        <h2 class="text-3xl font-bold text-center mb-12">成功案例展示</h2>-->
+<!--        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">-->
+<!--            <div class="card-hover rounded-xl overflow-hidden">-->
+<!--                <img src="https://picsum.photos/id/1067/600/400" alt="瓷磚鋪貼案例" class="w-full h-48 object-cover">-->
+<!--                <div class="p-4 bg-white">-->
+<!--                    <h4 class="font-bold">住宅瓷磚鋪貼</h4>-->
+<!--                    <p class="text-sm text-gray-500">120㎡ · 客廳+廚衛</p>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="card-hover rounded-xl overflow-hidden">-->
+<!--                <img src="https://picsum.photos/id/164/600/400" alt="木地板案例" class="w-full h-48 object-cover">-->
+<!--                <div class="p-4 bg-white">-->
+<!--                    <h4 class="font-bold">商用空間木地板</h4>-->
+<!--                    <p class="text-sm text-gray-500">300㎡ · 辦公室</p>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="card-hover rounded-xl overflow-hidden">-->
+<!--                <img src="https://picsum.photos/id/180/600/400" alt="太陽能安裝案例" class="w-full h-48 object-cover">-->
+<!--                <div class="p-4 bg-white">-->
+<!--                    <h4 class="font-bold">廠房太陽能安裝</h4>-->
+<!--                    <p class="text-sm text-gray-500">50kW · 租賃套餐</p>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="card-hover rounded-xl overflow-hidden">-->
+<!--                <img src="https://picsum.photos/id/271/600/400" alt="鋼構工程案例" class="w-full h-48 object-cover">-->
+<!--                <div class="p-4 bg-white">-->
+<!--                    <h4 class="font-bold">戶外鋼構搭建</h4>-->
+<!--                    <p class="text-sm text-gray-500">80㎡ · 商鋪雨棚</p>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</section>-->
+
+<!-- 服務流程 -->
+<section id="process" class="section">
+    <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-12">服務流程</h2>
+        <div class="flex flex-col md:flex-row justify-between items-center">
+            <div class="text-center md:w-1/6 mb-6 md:mb-0">
+                <div class="w-16 h-16 rounded-full bg-primary text-white flex items-center justify-center text-xl font-bold mx-auto mb-3">1</div>
+                <h4 class="font-bold">諮詢溝通</h4>
+                <p class="text-sm text-gray-500">線上/電話說明需求</p>
+            </div>
+            <div class="hidden md:block text-primary text-2xl"><i class="fa-solid fa-arrow-right"></i></div>
+            <div class="text-center md:w-1/6 mb-6 md:mb-0">
+                <div class="w-16 h-16 rounded-full bg-primary text-white flex items-center justify-center text-xl font-bold mx-auto mb-3">2</div>
+                <h4 class="font-bold">上門測量</h4>
+                <p class="text-sm text-gray-500">精準勘測現場</p>
+            </div>
+            <div class="hidden md:block text-primary text-2xl"><i class="fa-solid fa-arrow-right"></i></div>
+            <div class="text-center md:w-1/6 mb-6 md:mb-0">
+                <div class="w-16 h-16 rounded-full bg-primary text-white flex items-center justify-center text-xl font-bold mx-auto mb-3">3</div>
+                <h4 class="font-bold">方案報價</h4>
+                <p class="text-sm text-gray-500">定製方案+透明報價</p>
+            </div>
+            <div class="hidden md:block text-primary text-2xl"><i class="fa-solid fa-arrow-right"></i></div>
+            <div class="text-center md:w-1/6 mb-6 md:mb-0">
+                <div class="w-16 h-16 rounded-full bg-primary text-white flex items-center justify-center text-xl font-bold mx-auto mb-3">4</div>
+                <h4 class="font-bold">施工驗收</h4>
+                <p class="text-sm text-gray-500">專業施工+全程監理</p>
+            </div>
+            <div class="hidden md:block text-primary text-2xl"><i class="fa-solid fa-arrow-right"></i></div>
+            <div class="text-center md:w-1/6">
+                <div class="w-16 h-16 rounded-full bg-primary text-white flex items-center justify-center text-xl font-bold mx-auto mb-3">5</div>
+                <h4 class="font-bold">售後保障</h4>
+                <p class="text-sm text-gray-500">質保服務+定期維護</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 聯繫諮詢 -->
+<section id="contact" class="section bg-gray-100">
+    <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-12">諮詢方式</h2>
+        <div class="max-w-3xl mx-auto bg-white rounded-xl shadow-lg p-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- 手機號聯繫 -->
+                <div class="flex flex-col items-center p-6 border border-gray-100 rounded-lg hover:shadow-md transition-shadow">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+                        <i class="fa-solid fa-phone text-2xl text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">電話聯繫</h3>
+                    <p class="text-gray-600 mb-3 text-center">隨時歡迎來電諮詢，我們將儘快回應</p>
+                    <a href="tel:0905578456" class="text-primary font-bold text-lg hover:underline mb-2">
+                        0905 578456
+                    </a>
+                    <a href="tel:0989652596" class="text-primary font-bold text-lg hover:underline">
+                        0989 652596
+                    </a>
+                </div>
+
+                <!-- 郵箱聯繫 -->
+                <div class="flex flex-col items-center p-6 border border-gray-100 rounded-lg hover:shadow-md transition-shadow">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+                        <i class="fa-solid fa-envelope text-2xl text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">郵箱聯繫</h3>
+                    <p class="text-gray-600 mb-3 text-center">發送郵件給我們，我們會在小時內回復</p>
+                    <a href="mailto:yu92640968@gmail.com" class="text-primary font-bold text-lg hover:underline">
+                        yu92640968@gmail.com
+                    </a>
+                </div>
+            </div>
+
+            <div class="mt-8 pt-8 border-t border-gray-200 text-center">
+                <p class="text-gray-600">歡迎通過以上方式與我們聯繫，我們將竭誠為您服務</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 頁腳 -->
+<footer class="bg-gray-800 text-white py-8">
+    <div class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+            <div class="mb-6 md:mb-0">
+                <h3 class="text-2xl font-bold mb-2">鍇荷實業有限公司</h3>
+                <p class="text-gray-400">專業裝修 + 太陽能解決方案提供商</p>
+            </div>
+<!--            <div class="flex space-x-4">-->
+<!--                <a href="#" class="text-gray-400 hover:text-white text-2xl"><i class="fa-brands fa-line"></i></a>-->
+<!--                <a href="#" class="text-gray-400 hover:text-white text-2xl"><i class="fa-brands fa-weixin"></i></a>-->
+<!--                <a href="#" class="text-gray-400 hover:text-white text-2xl"><i class="fa-solid fa-map-marker-alt"></i></a>-->
+<!--            </div>-->
+        </div>
+        <div class="mt-8 pt-8 border-t border-gray-700 text-center text-gray-400">
+            <p>© 2025 鍇荷實業有限公司  | 公司地址：花蓮市尚志路9-7號</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // 平滑滚动 + 导航高亮联动
+    document.addEventListener('DOMContentLoaded', function() {
+        // 1. 平滑滚动功能（保留原有逻辑）
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return; // 跳过首页链接（href="#"）
+
+                document.querySelector(targetId).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        //导航高亮逻辑
+        const sections = document.querySelectorAll('section[id]'); // 所有带id的section
+        const navLinks = document.querySelectorAll('nav a[href^="#"]'); // 所有导航锚点链接
+
+        // 监听页面滚动事件
+        window.addEventListener('scroll', function() {
+            let current = ''; // 记录当前所在区域的id
+
+            // 遍历所有section，判断哪个在可视区域
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 100; // 偏移100px（避免导航栏遮挡）
+                const sectionHeight = section.offsetHeight;
+                if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+                    current = section.getAttribute('id'); // 匹配当前section的id
+                }
+            });
+
+            // 给对应导航链接添加高亮，移除其他链接的高亮
+            navLinks.forEach(link => {
+                link.classList.remove('text-primary', 'font-bold'); // 移除高亮样式
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('text-primary', 'font-bold'); // 添加高亮样式
+                }
+            });
+        });
+    });
+
+</script>
+<script>
+    // 存储每个卡片的当前幻灯片索引
+    const slideIndices = new Map();
+
+    // 初始化所有卡片的索引
+    document.querySelectorAll('.card-hover').forEach((card, index) => {
+        slideIndices.set(card, 0);
+    });
+
+    // 切换幻灯片函数
+    function changeSlide(n, button) {
+        // 获取当前卡片容器
+        const card = button.closest('.card-hover');
+        // 获取该卡片内的所有幻灯片
+        const slides = card.querySelectorAll('.slides');
+        // 获取当前索引
+        let currentIndex = slideIndices.get(card);
+
+        // 隐藏当前幻灯片
+        slides[currentIndex].classList.add('opacity-0');
+        slides[currentIndex].classList.remove('opacity-100');
+
+        // 计算新索引（循环切换）
+        currentIndex = (currentIndex + n + slides.length) % slides.length;
+        slideIndices.set(card, currentIndex);
+
+        // 显示新幻灯片
+        slides[currentIndex].classList.add('opacity-100');
+        slides[currentIndex].classList.remove('opacity-0');
+    }
+</script>
+</body>
+</html>
