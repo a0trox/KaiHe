@@ -22,13 +22,17 @@
 <!-- 導航欄 -->
 <nav class="fixed top-0 left-0 right-0 bg-white shadow-md z-50">
     <div class="container mx-auto px-4 py-3 flex justify-between items-center">
-        <h1 href="#" class="text-2xl font-bold text-primary">鍇荷實業</h1>
-        <div class="hidden md:flex space-x-6">
-            <a href="#home" class="hover:text-primary">首頁</a>
-            <a href="#services" class="hover:text-primary">業務範圍</a>
-            <a href="#cases" class="hover:text-primary">成功案例</a>
-            <a href="#process" class="hover:text-primary">服務流程</a>
-            <a href="#contact" class="hover:text-primary">聯繫我們</a>
+        <a href="#" class="text-2xl font-bold flex items-center gap-2 text-black hover:text-black focus:text-black active:text-black">
+            <i class="fa-solid fa-helmet-safety"></i>
+            <span>鍇荷實業</span>
+        </a>
+        <div class="hidden md:flex space-x-6 nav-menu">
+            <a href="#home" class="nav-link hover:text-primary">首頁</a>
+            <a href="#services" class="nav-link hover:text-primary">業務範圍</a>
+            <a href="#advantages" class="nav-link hover:text-primary">核心優勢</a>
+            <a href="#cases" class="nav-link hover:text-primary">成功案例</a>
+            <a href="#process" class="nav-link hover:text-primary">服務流程</a>
+            <a href="#contact" class="nav-link hover:text-primary">聯繫我們</a>
         </div>
         <button class="md:hidden text-2xl"><i class="fa-solid fa-bars"></i></button>
     </div>
@@ -82,6 +86,7 @@
                     <li><i class="fa-solid fa-check text-primary mr-2"></i>輕鋼架天花板安裝</li>
                     <li><i class="fa-solid fa-check text-primary mr-2"></i>室內外油漆施工</li>
                     <li><i class="fa-solid fa-check text-primary mr-2"></i>專業施工項目</li>
+                    <li><i class="fa-solid fa-check text-primary mr-2"></i>輕隔間</li>
                 </ul>
             </div>
 
@@ -90,10 +95,12 @@
                 <div class="text-primary text-3xl mb-4"><i class="fa-solid fa-gears"></i></div>
                 <h3 class="text-xl font-bold mb-3">維修改造工程</h3>
                 <ul class="text-gray-600 space-y-2">
+                    <li><i class="fa-solid fa-check text-primary mr-2"></i>輕隔間</li>
                     <li><i class="fa-solid fa-check text-primary mr-2"></i>水電維修</li>
                     <li><i class="fa-solid fa-check text-primary mr-2"></i>防水工程（屋頂/廚衛）</li>
                     <li><i class="fa-solid fa-check text-primary mr-2"></i>鋼構工程設計施工</li>
                     <li><i class="fa-solid fa-check text-primary mr-2"></i>舊屋翻新改造</li>
+                    <li><i class="fa-solid fa-check text-primary mr-2"></i>室內裝潢</li>
                 </ul>
             </div>
 
@@ -127,13 +134,141 @@
     </div>
 </section>
 
-<section id="cases" class="section bg-gray-100">
+<!-- 核心優勢 -->
+<section id="advantages" class="section bg-white">
     <div class="container mx-auto px-4">
-        <h2 class="text-3xl font-bold text-center mb-12">成功案例展示</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div class="text-center mb-16">
+            <h2 class="text-[clamp(1.8rem,4vw,2.5rem)] font-bold mb-4">統包服務的核心優勢</h2>
+            <div class="w-20 h-1 bg-primary mx-auto mb-6"></div>
+            <p class="text-neutral-600 max-w-3xl mx-auto">
+                選擇我們的統包服務，讓您省時、省力、省成本，輕鬆完成各類工程項目
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- 優勢1 -->
+            <div class="card-hover bg-neutral-50 rounded-xl shadow-sm p-8 text-center">
+                <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <i class="fa-solid fa-headset text-primary text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-4">一個窗口，全部搞定</h3>
+                <p class="text-neutral-600">
+                    不用自己找各種師傅，我們協調所有工班，負責進度、品質、驗收，讓您省去溝通的麻煩。
+                </p>
+            </div>
+
+            <!-- 優勢2 -->
+            <div class="card-hover bg-neutral-50 rounded-xl shadow-sm p-8 text-center">
+                <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <i class="fa-solid fa-cubes text-primary text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-4">一站式工程管理</h3>
+                <p class="text-neutral-600">
+                    從丈量 → 設計 → 報價 → 施工 → 驗收 → 售後服務，一次完成，全程不用您操心。
+                </p>
+            </div>
+
+            <!-- 優勢3 -->
+            <div class="card-hover bg-neutral-50 rounded-xl shadow-sm p-8 text-center">
+                <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <i class="fa-solid fa-coins text-primary text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-4">預算控管透明</h3>
+                <p class="text-neutral-600">
+                    施工前先說明選用材料、工序、細節，避免後期追加費用，預算清楚透明。
+                </p>
+            </div>
+
+            <!-- 優勢4 -->
+            <div class="card-hover bg-neutral-50 rounded-xl shadow-sm p-8 text-center">
+                <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <i class="fa-solid fa-wrench text-primary text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-4">專業解決問題能力</h3>
+                <p class="text-neutral-600">
+                    多年現場處理經驗，能解決漏水、結構補強、地面重作、排水設計等各種工程問題。
+                </p>
+            </div>
+        </div>
+
+        <!-- 選擇我們的理由 -->
+        <div class="mt-16 bg-primary/5 rounded-xl p-8">
+            <h3 class="text-xl font-bold mb-8 text-center">為什麼選擇我們？</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-lg shadow-sm flex items-center gap-4">
+                    <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
+                        <span class="text-white font-bold text-xl">01</span>
+                    </div>
+                    <div>
+                        <h4 class="font-bold mb-1">擁有多年統包經驗</h4>
+                        <p class="text-neutral-600 text-sm">累積豐富的工程管理與施工經驗</p>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm flex items-center gap-4">
+                    <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
+                        <span class="text-white font-bold text-xl">02</span>
+                    </div>
+                    <div>
+                        <h4 class="font-bold mb-1">對現場細節要求高</h4>
+                        <p class="text-neutral-600 text-sm">嚴格把關每一個施工環節與細節</p>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm flex items-center gap-4">
+                    <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
+                        <span class="text-white font-bold text-xl">03</span>
+                    </div>
+                    <div>
+                        <h4 class="font-bold mb-1">合理報價、誠信施工</h4>
+                        <p class="text-neutral-600 text-sm">價格透明合理，不偷工減料</p>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm flex items-center gap-4">
+                    <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
+                        <span class="text-white font-bold text-xl">04</span>
+                    </div>
+                    <div>
+                        <h4 class="font-bold mb-1">完工後提供保固</h4>
+                        <p class="text-neutral-600 text-sm">完工後依項目提供相應保固服務</p>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm flex items-center gap-4">
+                    <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
+                        <span class="text-white font-bold text-xl">05</span>
+                    </div>
+                    <div>
+                        <h4 class="font-bold mb-1">省麻煩、省時間、省成本</h4>
+                        <p class="text-neutral-600 text-sm">讓您輕鬆完成工程，不用自己協調</p>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm flex items-center gap-4">
+                    <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
+                        <span class="text-white font-bold text-xl">06</span>
+                    </div>
+                    <div>
+                        <h4 class="font-bold mb-1">專業團隊全程服務</h4>
+                        <p class="text-neutral-600 text-sm">從諮詢到完工，全程專業服務</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--案例展示-->
+<section id="cases" class="section bg-neutral-100">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+            <h2 class="text-[clamp(1.8rem,4vw,2.5rem)] font-bold mb-4">成功案例展示</h2>
+            <div class="w-20 h-1 bg-primary mx-auto mb-6"></div>
+            <p class="text-neutral-600 max-w-3xl mx-auto">
+                多年來完成的各類工程案例，品質與服務獲得客戶高度肯定
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <!-- 案例卡片 1-->
-            <div class="card-hover rounded-xl overflow-hidden relative group">
-                <div class="slideshow-container relative w-full h-48 overflow-hidden">
+            <div class="card-hover rounded-xl overflow-hidden bg-white shadow-md group">
+                <div class="slideshow-container relative w-full h-60 overflow-hidden">
                     <div class="slides absolute inset-0 transition-opacity duration-500">
                         <img src="https://a0trox.github.io/KaiHe/duskin_project1/src/main/resources/static/PavingBricks/PB1.jpg" alt="瓷磚鋪貼案例1" class="w-full h-full object-cover">
                     </div>
@@ -145,20 +280,21 @@
                     </div>
                 </div>
                 <div class="absolute right-0 top-0 h-full flex flex-col justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                    <button class="w-8 h-8 bg-black/50 hover:bg-black/70 text-white rounded-l-full flex items-center justify-center transition-all" onclick="changeSlide(1, this)">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                    <button class="w-10 h-10 bg-black/50 hover:bg-black/70 text-white rounded-l-full flex items-center justify-center transition-all" onclick="changeSlide(1, this)">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
                             <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
                         </svg>
                     </button>
                 </div>
-                <div class="p-4 bg-white">
-                    <h4 class="font-bold">住宅瓷磚鋪貼</h4>
+                <div class="p-6">
+                    <h4 class="font-bold text-lg mb-2">住宅瓷磚鋪貼</h4>
+                    <p class="text-neutral-600 text-sm">完整的泥作工程，包含牆面地面瓷磚鋪設，品質優良，工法標準。</p>
                 </div>
             </div>
 
             <!-- 案例卡片 2-->
-            <div class="card-hover rounded-xl overflow-hidden relative group">
-                <div class="slideshow-container relative w-full h-48 overflow-hidden">
+            <div class="card-hover rounded-xl overflow-hidden bg-white shadow-md group">
+                <div class="slideshow-container relative w-full h-60 overflow-hidden">
                     <div class="slides absolute inset-0 transition-opacity duration-500">
                         <img src="https://a0trox.github.io/KaiHe/duskin_project1/src/main/resources/static/WoodFloor/WF1.png" alt="木地板案例1" class="w-full h-full object-cover">
                     </div>
@@ -170,20 +306,21 @@
                     </div>
                 </div>
                 <div class="absolute right-0 top-0 h-full flex flex-col justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                    <button class="w-8 h-8 bg-black/50 hover:bg-black/70 text-white rounded-l-full flex items-center justify-center transition-all" onclick="changeSlide(1, this)">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                    <button class="w-10 h-10 bg-black/50 hover:bg-black/70 text-white rounded-l-full flex items-center justify-center transition-all" onclick="changeSlide(1, this)">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
                             <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
                         </svg>
                     </button>
                 </div>
-                <div class="p-4 bg-white">
-                    <h4 class="font-bold">商用空間木地板</h4>
+                <div class="p-6">
+                    <h4 class="font-bold text-lg mb-2">商用空間木地板</h4>
+                    <p class="text-neutral-600 text-sm">商業空間木地板鋪設，耐磨耐用，施工精細，符合營業場所需求。</p>
                 </div>
             </div>
 
             <!-- 案例卡片 3 -->
-            <div class="card-hover rounded-xl overflow-hidden relative group">
-                <div class="slideshow-container relative w-full h-48 overflow-hidden">
+            <div class="card-hover rounded-xl overflow-hidden bg-white shadow-md group">
+                <div class="slideshow-container relative w-full h-60 overflow-hidden">
                     <div class="slides absolute inset-0 transition-opacity duration-500">
                         <img src="https://a0trox.github.io/KaiHe/duskin_project1/src/main/resources/static/SolarEnergy/SolarEnergy1.png" alt="太陽能安裝案例1" class="w-full h-full object-cover">
                     </div>
@@ -195,20 +332,21 @@
                     </div>
                 </div>
                 <div class="absolute right-0 top-0 h-full flex flex-col justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                    <button class="w-8 h-8 bg-black/50 hover:bg-black/70 text-white rounded-l-full flex items-center justify-center transition-all" onclick="changeSlide(1, this)">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                    <button class="w-10 h-10 bg-black/50 hover:bg-black/70 text-white rounded-l-full flex items-center justify-center transition-all" onclick="changeSlide(1, this)">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
                             <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
                         </svg>
                     </button>
                 </div>
-                <div class="p-4 bg-white">
-                    <h4 class="font-bold">廠房太陽能安裝</h4>
+                <div class="p-6">
+                    <h4 class="font-bold text-lg mb-2">廠房太陽能安裝</h4>
+                    <p class="text-neutral-600 text-sm">廠房太陽能板規劃與安裝，節能減碳，降低用電成本，符合環保政策。</p>
                 </div>
             </div>
 
-            <!-- 案例卡片 4：-->
-            <div class="card-hover rounded-xl overflow-hidden relative group">
-                <div class="slideshow-container relative w-full h-48 overflow-hidden">
+            <!-- 案例卡片 4 -->
+            <div class="card-hover rounded-xl overflow-hidden bg-white shadow-md group">
+                <div class="slideshow-container relative w-full h-60 overflow-hidden">
                     <div class="slides absolute inset-0 transition-opacity duration-500">
                         <img src="https://a0trox.github.io/KaiHe/duskin_project1/src/main/resources/static/SteelStructure/SS3.png" alt="鋼構工程案例1" class="w-full h-full object-cover">
                     </div>
@@ -220,19 +358,21 @@
                     </div>
                 </div>
                 <div class="absolute right-0 top-0 h-full flex flex-col justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                    <button class="w-8 h-8 bg-black/50 hover:bg-black/70 text-white rounded-l-full flex items-center justify-center transition-all" onclick="changeSlide(1, this)">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                    <button class="w-10 h-10 bg-black/50 hover:bg-black/70 text-white rounded-l-full flex items-center justify-center transition-all" onclick="changeSlide(1, this)">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
                             <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
                         </svg>
                     </button>
                 </div>
-                <div class="p-4 bg-white">
-                    <h4 class="font-bold">鋼構工程</h4>
+                <div class="p-6">
+                    <h4 class="font-bold text-lg mb-2">鋼構工程</h4>
+                    <p class="text-neutral-600 text-sm">廠房與建築鋼構工程，結構安全穩固，符合建築法規，施工品質優良。</p>
                 </div>
             </div>
         </div>
     </div>
 </section>
+
 
 <!-- 服務流程 -->
 <section id="process" class="section">
@@ -343,9 +483,10 @@
                 });
             });
         });
-        //导航高亮逻辑
+
+        // 2. 导航高亮逻辑（
         const sections = document.querySelectorAll('section[id]');
-        const navLinks = document.querySelectorAll('nav a[href^="#"]');
+        const navLinks = document.querySelectorAll('.nav-link'); // 只選菜單鏈接
 
         window.addEventListener('scroll', function() {
             let current = '';
@@ -356,6 +497,7 @@
                     current = section.getAttribute('id');
                 }
             });
+
             // 给对应导航链接添加高亮，移除其他链接的高亮
             navLinks.forEach(link => {
                 link.classList.remove('text-primary', 'font-bold'); // 移除高亮样式
@@ -365,7 +507,6 @@
             });
         });
     });
-
 </script>
 
 <script>
